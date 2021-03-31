@@ -5,8 +5,10 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in fbauth.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+gem "rake", "~> 13.0.3"
 
-gem "rspec", "~> 3.0"
+gem "rspec", "~> 3.10.0"
 
-gem "rubocop", "~> 1.7"
+gem "rubocop", "~> 1.10.0"
+
+gem "http", "~> 4.4.1"
