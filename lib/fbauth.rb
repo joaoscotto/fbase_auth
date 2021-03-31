@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "fbauth/version"
-require_relative "fbauth/config"
+require "http"
+require "fbauth/version"
+require "fbauth/config"
+require "fbauth/client"
+require "fbauth/client_decorator"
 
 module Fbauth
   class << self
@@ -14,5 +17,6 @@ module Fbauth
 
   def self.configure
     yield config
+    Fbauth::ClientDecorator.apply
   end
 end
