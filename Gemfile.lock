@@ -9,6 +9,8 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
+    crack (0.4.5)
+      rexml
     diff-lcs (1.4.4)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -16,6 +18,7 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
+    hashdiff (1.0.1)
     http (4.4.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -63,6 +66,10 @@ GEM
       unf_ext
     unf_ext (0.0.7.7)
     unicode-display_width (2.0.0)
+    webmock (3.12.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   x86_64-linux
@@ -73,6 +80,7 @@ DEPENDENCIES
   rake (~> 13.0.3)
   rspec (~> 3.10.0)
   rubocop (~> 1.10.0)
+  webmock (~> 3.12)
 
 BUNDLED WITH
    2.2.14
