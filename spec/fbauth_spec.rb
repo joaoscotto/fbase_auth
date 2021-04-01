@@ -2,11 +2,23 @@
 
 RSpec.describe Fbauth do
   describe "#configure" do
-    before { Fbauth.configure { |config| config.api_key = "test" } }
-    subject { Fbauth.config.api_key }
+    before do
+      @host = "https://identitytoolkit.googleapis.com/v1/accounts:"
+      Fbauth.configure { |config| config.api_key = "test" }
+    end
+
+    subject { Fbauth.config }
 
     it "the api_key value is test" do
-      expect(subject).to eq "test"
+      expect(subject.api_key).to eq "test"
+    end
+
+    it "the return_secure_token value is true" do
+      expect(subject.return_secure_token).to eq true
+    end
+
+    it "the host value is #{@host}" do
+      expect(subject.host).to eq @host
     end
   end
 
