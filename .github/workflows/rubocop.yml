@@ -20,11 +20,8 @@ jobs:
         ruby-version: 2.6.6
 
     - name: Build App
-      env:
-        RAILS_ENV: test
       run: |
+        gem install bundler
         bin/setup
     - name: Run Rubocop
-      env:
-        RAILS_ENV: test
       run: bundle exec rubocop
