@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Fbauth::Helper
   def self.camelize str
     str.split("_").map(&:capitalize).join
