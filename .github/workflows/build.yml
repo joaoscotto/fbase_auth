@@ -19,9 +19,11 @@ jobs:
       with:
         ruby-version: 2.6.6
 
-    - name: Build App
+    - name: build
       run: |
         gem install bundler
         bin/setup
+    - name: rspec
+      run: bundle exec rspec
     - name: Run Rubocop
       run: bundle exec rubocop
