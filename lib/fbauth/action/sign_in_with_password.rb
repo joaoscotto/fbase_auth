@@ -1,26 +1,22 @@
 # frozen_string_literal: true
 
-module Fbauth
-  module Action
-    require "fbauth/request"
+module Fbauth::Action
+  class SignInWithPassword
+    PATH = "signInWithPassword"
 
-    class SignInWithPassword
-      PATH = "signInWithPassword"
+    def initialize email:, password:
+      @email = email
+      @password = password
+    end
 
-      def initialize(email:, password:)
-        @email = email
-        @password = password
-      end
-
-      def call
-        Fbauth::Request.post(
-          PATH,
-          {
-            email: @email,
-            password: @password
-          }
-        )
-      end
+    def call
+      Fbauth::Request.post(
+        PATH,
+        {
+          email: @email,
+          password: @password
+        }
+      )
     end
   end
 end
