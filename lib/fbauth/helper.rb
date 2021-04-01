@@ -9,6 +9,7 @@ module Fbauth::Helper
     Dir
       .entries("./lib/fbauth/action/")
       .map { |file| file.gsub(".rb", "") if file.include?(".rb") }
+      .tap { |file| file.delete("base") }
       .compact
   end
 end
