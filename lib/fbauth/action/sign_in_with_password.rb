@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Fbauth::Action
-  class SignInWithPassword
+  class SignInWithPassword < Base
     PATH = "signInWithPassword"
 
     def initialize email:, password:
@@ -9,14 +9,13 @@ module Fbauth::Action
       @password = password
     end
 
-    def call
-      Fbauth::Request.post(
-        PATH,
-        {
-          email: @email,
-          password: @password
-        }
-      )
+    private
+    def payload
+      { 
+        email: @email,
+        password: @password,
+        return_secure_token: true     
+      }
     end
   end
 end
