@@ -21,5 +21,11 @@ Style/ClassAndModuleChildren:
 Lint/MissingSuper:
   Enabled: false
 
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
 Layout/LineLength:
   Max: 120
