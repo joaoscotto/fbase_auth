@@ -10,11 +10,12 @@ module Fbauth::Action
     end
 
     private
+
     def payload
-      { 
+      {
         email: @email,
         password: @password,
-        return_secure_token: true     
+        return_secure_token: true
       }
     end
   end
