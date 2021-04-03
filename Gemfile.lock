@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fbauth (0.1.0)
+    fbase_auth (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -75,7 +75,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  fbauth!
+  fbase_auth!
   http (~> 4.4.1)
   rake (~> 13.0.3)
   rspec (~> 3.10.0)
