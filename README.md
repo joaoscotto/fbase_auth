@@ -1,15 +1,13 @@
-# Fbauth
+# FbaseAuth ![build](https://github.com/joaoscotto/fbase_auth/workflows/build/badge.svg?event=push)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fbauth`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+FbaseAuth is a Ruby wrapper for [Firebase Authentication](https://firebase.google.com/docs/auth).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fbauth'
+gem 'fbase_auth'
 ```
 
 And then execute:
@@ -18,11 +16,32 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install fbauth
+    $ gem install fbase_auth
 
 ## Usage
 
-TODO: Write usage instructions here
+
+### Configuration example:
+
+```ruby
+
+FbaseAuth.configure do |config| 
+  config.api_key = 'example'
+  config.return_secure_token = false #(default is true)
+end
+```
+### Usage examples:
+
+```ruby
+FbaseAuth::Client.sign_up(email:, password: '')
+FbaseAuth::Client.sign_in_with_password(email:, password: '')
+FbaseAuth::Client.send_email_verification(id_token: '')
+FbaseAuth::Client.confirm_email_verification(oob_code: '')
+FbaseAuth::Client.send_password_reset_email(email: '')
+FbaseAuth::Client.verify_password_reset_code(oob_code: '')
+FbaseAuth::Client.confirm_password_reset(oob_code: '', new_password: '')
+FbaseAuth::Client.delete_account(id_token: '')
+```
 
 ## Development
 
@@ -32,7 +51,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fbauth.
+Bug reports and pull requests are welcome on GitHub at https://github.com/joaoscotto/fbase_auth.
 
 ## License
 
