@@ -1,4 +1,4 @@
-# FbaseAuth ![build](https://github.com/joaoscotto/fbase_auth/workflows/build/badge.svg?event=push)
+# FbaseAuth ![build](https://github.com/joaoscotto/fbase_auth/workflows/build/badge.svg?event=push) [![Gem version](https://img.shields.io/gem/v/fbase_auth.svg)](https://rubygems.org/gems/fbase_auth)
 
 FbaseAuth is a Ruby wrapper for [Firebase Authentication](https://firebase.google.com/docs/auth).
 
