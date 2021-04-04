@@ -1,0 +1,7 @@
+version: '3'
+services:
+  fbase_auth:
+    build: .
+    volumes:
+      - ./:/app
+    tty: true
