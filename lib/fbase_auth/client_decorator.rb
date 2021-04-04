@@ -5,10 +5,10 @@ module FbaseAuth::ClientDecorator
     FbaseAuth::Helper.action_classes.each do |klass|
       klass_name = FbaseAuth::Helper.camelize klass
 
-      FbaseAuth::Client.define_singleton_method klass do |*args|
+      FbaseAuth::Client.define_singleton_method klass do |**args|
         Object
           .const_get("FbaseAuth::Action::#{klass_name}")
-          .new(*args)
+          .new(**args)
           .call
       end
     end
