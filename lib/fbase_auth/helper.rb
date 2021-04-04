@@ -7,7 +7,7 @@ module FbaseAuth::Helper
 
   def self.action_classes
     Dir
-      .entries("./lib/fbase_auth/action/")
+      .entries("#{File.dirname(__FILE__)}/action/")
       .map { |file| file.gsub(".rb", "") if file.include?(".rb") }
       .tap { |file| file.delete("base") }
       .compact
