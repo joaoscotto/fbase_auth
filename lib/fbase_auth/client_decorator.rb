@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "fbase_auth/helper"
-
 module FbaseAuth::ClientDecorator
   def self.apply
     FbaseAuth::Helper.action_classes.each do |klass|

@@ -5,6 +5,9 @@ require "fbase_auth/version"
 require "fbase_auth/config"
 require "fbase_auth/client"
 require "fbase_auth/client_decorator"
+require "fbase_auth/helper"
+require "fbase_auth/request"
+Dir["#{File.dirname(__FILE__)}/fbase_auth/action/*.rb"].sort.each { |file| require file }
 
 module FbaseAuth
   class << self
