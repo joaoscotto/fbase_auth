@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in fbauth.gemspec
+# Specify your gem's dependencies in fbase_auth.gemspec
 gemspec
 
 gem "http", "~> 4.4.1"

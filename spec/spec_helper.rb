@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "fbauth"
+require "fbase_auth"
 require "webmock/rspec"
 
 RSpec.configure do |config|
@@ -15,7 +15,7 @@ RSpec.configure do |config|
   end
 
   config.before :all, :mock_api_host do
-    @url = "#{Fbauth.config.host}#{described_class::PATH}?key=#{Fbauth.config.api_key}"
+    @url = "#{FbaseAuth.config.host}#{described_class::PATH}?key=#{FbaseAuth.config.api_key}"
     stub_request(:post, @url).to_return body: { 'message': "ok" }.to_json
   end
 end
